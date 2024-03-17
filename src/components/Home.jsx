@@ -34,13 +34,19 @@ function Home() {
           <Table striped bordered hover size="sm" width="100">
             <thead>
               <tr className=" border-2 border-blue-400">
-                <th className="bg-[#81689D] text-white text-lg font-bold">
+                <th
+                  style={{ background: "#81689D" }}
+                  className="table-header text-white text-lg font-bold">
                   Name
                 </th>
-                <th className="bg-[#81689D] text-white text-lg font-bold">
+                <th
+                  style={{ background: "#81689D" }}
+                  className="table-header text-white text-lg font-bold">
                   Age
                 </th>
-                <th className="bg-[#81689D] text-white text-lg font-bold">
+                <th
+                  style={{ background: "#81689D" }}
+                  className="table-header text-white text-lg font-bold">
                   Actions
                 </th>
               </tr>
@@ -50,16 +56,20 @@ function Home() {
                 ? Employees.map((item) => {
                     return (
                       <tr key={item.id}>
-                        <td className="bg-blue-300 text-white font-bold text-lg whitespace-nowrap">
+                        <td
+                          style={{ background: "#333A73" }}
+                          className=" text-white font-bold text-lg whitespace-nowrap">
                           {item.name}
                         </td>
-                        <td className="bg-[#333A73] text-white font-bold text-lg whitespace-nowrap">
+                        <td
+                          style={{ background: "#333A73" }}
+                          className=" text-white font-bold text-lg whitespace-nowrap">
                           {item.age}
                         </td>
                         <td className="whitespace-nowrap">
                           <Link to={`/edit`}>
                             <Button
-                              className="bg-[#114232] text-white text-lg font-bold"
+                              className="bg-[#114232] text-white text-lg font-bold w-[50%] "
                               onClick={() =>
                                 handleEdit(item.id, item.name, item.age)
                               }>
@@ -69,7 +79,7 @@ function Home() {
                           </Link>
                           &nbsp;
                           <Button
-                            className="bg-[#D24545] text-white text-lg font-bold"
+                            className="bg-[#D24545] text-white text-lg font-bold w-[50%]"
                             onClick={() => handleDelete(item.id)}>
                             {" "}
                             Delete{" "}
